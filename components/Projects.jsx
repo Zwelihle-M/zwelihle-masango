@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/legacy/image";
 import TakealotClone from "../public/images/takealotclone.png";
+import GazaEsport from "../public/images/gazaesport.png"
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -11,6 +12,12 @@ const Projects = () => {
       title: "Takealot clone",
       imgSrc: TakealotClone,
       url: "/takealotclone",
+    },
+    {
+      id: 2,
+      title: "GaZA Esport",
+      imgSrc: GazaEsport,
+      url: "/gazaesport",
     },
   ];
   return (
@@ -25,20 +32,23 @@ const Projects = () => {
           </h1>
 
           <div className="max-5xl mx-auto grid md:grid-cols-2 gap-8 ">
-            {projects.map(({ id, title, imgSrc }) => (
+            {projects.map(({ id, title, imgSrc,url }) => (
               <div key={id}>
                 <div className="relative cursor-pointer group shadow-sm overflow-hidden rounded-lg">
                   <Image
                     src={imgSrc}
                     alt={title}
                     className="duration-200 hover:scale-110 group-hover:opacity-50 rounded-lg"
+                    height={700}
+                    width={900}
+                    quality={100}
                   />
 
                   <div className="hidden group-hover:flex flex-col justify-center items-center absolute top-0 bottom-0 left-0 right-0">
                     <h1 className="text-lg my-4 duration-300 tracking-wide text-center">
                       {title}
                     </h1>
-                    <Link href={"/takealotclone"}>
+                    <Link href={url}>
                       <p className="text-center px-4 py-2 pb-2 rounded-lg bg-gradient-to-r from-fuchsia-800 to-violet-600 text-white">
                         <span>view</span>
                         <svg

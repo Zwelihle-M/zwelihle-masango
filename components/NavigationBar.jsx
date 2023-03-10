@@ -95,7 +95,7 @@ const NavigationBar = () => {
 
   return (
     <header className="w-full h-20 z-20 fixed duration-300 ease-in backdrop-blur-xl">
-      <div></div>
+
       <div className="flex justify-between items-center w-full h-full max-w-screen-xl mx-auto p-4 ">
         <Link href="/#hero">
           {/* logo goes here */}
@@ -154,7 +154,7 @@ const NavigationBar = () => {
           )}
         </motion.div>
       </div>
-
+{/* mobile */}
       <div
         className={
           navigation
